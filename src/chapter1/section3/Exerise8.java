@@ -1,9 +1,13 @@
 package chapter1.section3;
 
+import edu.princeton.cs.algs4.StdOut;
+
 public class Exerise8 {
     public static void main(String[] args) {
         DoublingStackOfStrings stackOfStrings = new DoublingStackOfStrings();
-
+        stackOfStrings.push("1");
+        stackOfStrings.pop();
+        stackOfStrings.push("1");
     }
 }
 
@@ -26,7 +30,7 @@ class DoublingStackOfStrings {
             throw new RuntimeException("the stack is empty");
         }
         String item = strings[--n];
-        if (n > 0 && n == strings.length / 4) {
+        if (!isEmpty() && n == strings.length / 4) {
             resize(strings.length / 2);
         }
         strings[n] = null;

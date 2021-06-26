@@ -1,7 +1,5 @@
 package chapter1.section3;
 
-import edu.princeton.cs.algs4.Queue;
-
 public class Exerise14 {
     public static void main(String[] args) {
         ResizingArrayQueueOfStrings queueOfStrings = new ResizingArrayQueueOfStrings();
@@ -24,12 +22,14 @@ class ResizingArrayQueueOfStrings {
 
     public String dequeue() {
         String item = items[0];
-        //重新排列顺序
-        moveBack();
-        if(N == items.length/4) {
-            resize(items.length/2);
-        }
         N--;
+        //重新排列顺序
+        if(!isEmpty()) {
+            moveBack();
+            if(N == items.length/4) {
+                resize(items.length/2);
+            }
+        }
         return item;
     }
 
