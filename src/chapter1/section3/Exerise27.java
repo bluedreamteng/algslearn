@@ -7,9 +7,8 @@ public class Exerise27 {
         if (first == null) {
             return 0;
         }
-        int max = 0;
-
-        Node current = first;
+        int max = Integer.parseInt(first.item);
+        Node current = first.next;
         while (current != null) {
             String item = current.item;
             int currentNum = Integer.parseInt(item);
