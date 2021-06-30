@@ -13,7 +13,7 @@ public class Exerise29 {
         queue.enqueue("1");
         queue.enqueue("2");
         queue.enqueue("3");
-        queue.enqueue("4");
+
         for (String item : queue) {
             StdOut.println(item);
         }
